@@ -49,3 +49,8 @@ mexicoCity_entertainment = []
 indianapolisEntertainment = []
 amsterdamEntertainment = []
 
+print("Welcome to The Day Trip Generator! It seems that you're ready for a random adventure!")
+
+generateAdventure = input("Would you like to start your journey with a location?")
+
+# if generateAdventure == "y":
