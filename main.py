@@ -43,9 +43,54 @@ def destinationSelection():
 
 userApprovedDestination = destinationSelection()
 
-restaurant = ["Biagi's", "Cheesecake Factory", "Island Prime", "Kokoro", "Morton's Steakhouse"]
-
 transportation = ["Motorcycle", "Car", "Plane", "Train", "Bus"]
 
+def transportationSelection():
+    user_confirmation = False
+    while user_confirmation is False:
+        random_transportation = random.choice(transportation)
+        print(f"The cards have selected {random_transportation} as your means of transportation.")
+        user_input = input("Does this sound like a good way to travel for you? y/n: ")
+        if user_input == "y":
+            print(f"It has been decided! {random_transportation} will be the mode of transportation!! Let's decide what to do when you arrive!")
+            return random_transportation
+        elif user_input == "n":
+            print("That's okay, we shall shuffle the deck and try again.")
+
+
+userApprovedTransportation = transportationSelection()
+
 entertainment = ["See a play", "Museum", "Go-kart racing", "Local shopping", "Mini-golf"]
+
+def entertainmentSelection():
+    user_confirmation = False
+    while user_confirmation is False:
+        random_entertainment = random.choice(entertainment)
+        print(f"The cards have selected {random_entertainment} for entertainment.")
+        user_input = input("Does this sound like a fitting activity for you? y/n: ")
+        if user_input == "y":
+            print(f"It has been decided! {random_entertainment} will be the entertainment of the night!! Let's figure out what to eat!")
+            return random_entertainment
+        elif user_input == "n":
+            print("That's okay, we shall shuffle the deck and try again.")
+
+
+userApprovedEntertainment = entertainmentSelection()
+
+restaurant = ["Biagi's", "Cheesecake Factory", "Island Prime", "Kokoro", "Morton's Steakhouse"]
+
+def restaurantSelection():
+    user_confirmation = False
+    while user_confirmation is False:
+        random_restaurant = random.choice(restaurant)
+        print(f"The cards have selected {random_restaurant} for dinner.")
+        user_input = input("Does this seem like a satisfying meal for you? y/n: ")
+        if user_input == "y":
+            print(f"It has been decided! {random_restaurant} will be serving dinner!! Let's reiterate the selections!")
+            return random_restaurant
+        elif user_input == "n":
+            print("That's okay, we shall shuffle the deck and try again.")
+
+
+userApprovedRestaurant = restaurantSelection()
 
