@@ -22,35 +22,30 @@
 # (5 points): As a developer, I want all of my functions to have a Single Responsibility. 
 # Remember, each function should do just one thing!
 
+import random
 
-destination = ["New York City, United States", "Rome, Italy", "San Diego, United States", "Paris, France", "Gramado, Brazil", "Naples, Italy", "Athens, Greece", "Mexico City, Mexico", "Indianapolis, United States", "Amsterdam, Netherlands"]
+print("Welcome to The Day Trip Generator! It seems that you're ready for the cards to decide an adventure for you!")
 
-newYork_restaurant = []
-romeRestaurant = []
-sanDiego_restaurant = []
-parisRestaurant = []
-gramadoRestuarant = []
-naplesRestuarant = []
-athensRestuarant = []
-mexicoCity_restuarant = []
-indianapolisRestuarant = []
-amsterdamRestuarant = []
+destination = ["New York", "Rome", "San Diego", "Paris", "Brazil", "Naples", "Athens", "Mexico City", "Indianapolis", "Amsterdam"]
+
+def destinationSelection():
+    user_confirmation = False
+    while user_confirmation is False:
+        random_destination = random.choice(destination)
+        print(f"The cards have selected {random_destination} for you.")
+        user_input = input("Does this sound like a good time to you? y/n: ")
+        if user_input == "y":
+            print(f"It has been decided! {random_destination} will be the destination!! Let's decide how to get there!")
+            return random_destination
+        elif user_input == "n":
+            print("That's okay, we shall shuffle the deck and try again.")
+
+
+userApprovedDestination = destinationSelection()
+
+restaurant = ["Biagi's", "Cheesecake Factory", "Island Prime", "Kokoro", "Morton's Steakhouse"]
 
 transportation = ["Motorcycle", "Car", "Plane", "Train", "Bus"]
 
-newYork_entertainment = []
-romeEntertainment = []
-sanDiego_entertainment = []
-parisentertainment = []
-gramadoEntertainment = []
-naplesEntertainment = []
-athensEntertainment = []
-mexicoCity_entertainment = []
-indianapolisEntertainment = []
-amsterdamEntertainment = []
+entertainment = ["See a play", "Museum", "Go-kart racing", "Local shopping", "Mini-golf"]
 
-print("Welcome to The Day Trip Generator! It seems that you're ready for a random adventure!")
-
-generateAdventure = input("Would you like to start your journey with a location?")
-
-# if generateAdventure == "y":
