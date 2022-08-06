@@ -94,3 +94,23 @@ def restaurantSelection():
 
 userApprovedRestaurant = restaurantSelection()
 
+
+def tripConfirmation():
+    user_confirmation = False
+    while user_confirmation is False:
+        full_trip = (f"Location is {userApprovedDestination}, Mode of Transportation is {userApprovedTransportation}, entertainment is {userApprovedEntertainment}, and dinner will be at {userApprovedRestaurant}")
+        print(full_trip)
+        user_input = input("Would you like to confirm your trip? y/n: ")
+        if user_input == "y":
+            print(f"Your trip is complete, you and the cards have chosen {userApprovedDestination}. You will travel there by {userApprovedTransportation}. Entertainment for the evening will be {userApprovedEntertainment}. Dinner for the evening at {userApprovedRestaurant}.")
+            return full_trip
+        elif user_input == "n":
+            print("That's okay, we shall shuffle the deck and try again.")
+            destinationSelection()
+            transportationSelection()
+            entertainmentSelection()
+            restaurantSelection()
+            
+userApprovedTrip = tripConfirmation()
+
+# print(f"Your trip is complete, you and the cards have chosen {userApprovedDestination}. You will travel there by {userApprovedTransportation}. Entertainment for the evening will be {userApprovedEntertainment}. Dinner for the evening at {userApprovedRestaurant}.")
